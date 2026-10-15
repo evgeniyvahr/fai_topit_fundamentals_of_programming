@@ -43,6 +43,7 @@ style obj2 fill:yellow
 # Задание 2
  ## Изменение 1 
  <img width="639" height="616" alt="image" src="https://github.com/user-attachments/assets/8861fa20-64a8-4b48-890e-5bdfe6e61b94" />
+ 
  ## Изменение 2
  <img width="749" height="699" alt="image" src="https://github.com/user-attachments/assets/8cbbf343-5216-4da6-bcb7-49c33eebd7d5" />
 
