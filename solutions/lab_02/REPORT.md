@@ -27,5 +27,6 @@ style obj1 fill:red
 style obj2 fill:yellow
 ```
  ## Практическая задача
- 
+ ### <img width="1591" height="775" alt="image" src="https://github.com/user-attachments/assets/b3f2bd73-991c-419c-8952-5780192385ee" />
+
  
