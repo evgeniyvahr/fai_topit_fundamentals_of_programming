@@ -104,7 +104,9 @@ style obj2 fill:yellow
 # Задание 4
 <img width="948" height="660" alt="image" src="https://github.com/user-attachments/assets/a6a56d83-c750-4977-be1c-024483ffafed" />
 <img width="539" height="347" alt="image" src="https://github.com/user-attachments/assets/daf01928-50d2-4b21-9068-5c5f5a745538" />
+
 4) Подсчёта ссылок недостаточно, потому что при возникновении циклических ссылок после удаления внешних имён всё равно остаются вложенные ссылки.
+
 5) Поколения нужны для того, чтобы оптимизировать работу сборщика мусора. Благодаря этому временные файлы будут удаляться быстро, а долгоживущие объекты избегут постоянной проверки и траты времени и памяти.
 
 ## Дополнительный эксперимент
@@ -112,6 +114,38 @@ style obj2 fill:yellow
 <img width="539" height="158" alt="image" src="https://github.com/user-attachments/assets/876917ee-c6ff-46ec-a715-3e569ea6988e" />
 
 
+## Практическая задача
+<img width="808" height="835" alt="image" src="https://github.com/user-attachments/assets/05175374-4633-4348-9e29-f9f22a44b2d2" />
+<img width="470" height="399" alt="image" src="https://github.com/user-attachments/assets/7e31f111-1138-4de7-ba6e-fd967575d003" />
+
+## Схема графа
+```mermaid
+  graph LR
+    A["a<br/>{name: 'a', neighbors: [b]}"]
+    B["b<br/>{name: 'b', neighbors: [c]}"]
+    C["c<br/>{name: 'c', neighbors: [a]}"]
+    D["d<br/>{name: 'd, neighbors: []}"]
+
+    A -->|neighbors[0]| B
+    B -->|neighbors[0]| C
+    C -->|neighbors[0]| A
+
+    style A fill:yellow
+    style B fill:red
+    style C fill:orange
+    style D fill:green
+```
+
+## Вопросы для анализа
+ 1. Как возникает циклическая ссылка?
+ 
+       Ответ: 
+ 2. 
+
+       Ответ: 
+ 3. 
+
+       Ответ: 
 
 
 
