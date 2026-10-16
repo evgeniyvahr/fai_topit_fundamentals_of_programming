@@ -101,4 +101,20 @@ style obj2 fill:yellow
 
        Ответ: Тем, что слабая ссылка не увеличивает счётчик и не продлевает жизнь объекта.
 
+# Задание 4
+<img width="948" height="660" alt="image" src="https://github.com/user-attachments/assets/a6a56d83-c750-4977-be1c-024483ffafed" />
+<img width="539" height="347" alt="image" src="https://github.com/user-attachments/assets/daf01928-50d2-4b21-9068-5c5f5a745538" />
+4) Подсчёта ссылок недостаточно, потому что при возникновении циклических ссылок после удаления внешних имён всё равно остаются вложенные ссылки.
+5) Поколения нужны для того, чтобы оптимизировать работу сборщика мусора. Благодаря этому временные файлы будут удаляться быстро, а долгоживущие объекты избегут постоянной проверки и траты времени и памяти.
+
+## Дополнительный эксперимент
+<img width="810" height="751" alt="image" src="https://github.com/user-attachments/assets/fa3cbc82-c533-4b04-8ea3-df4d9bc8392e" />
+<img width="539" height="158" alt="image" src="https://github.com/user-attachments/assets/876917ee-c6ff-46ec-a715-3e569ea6988e" />
+
+
+
+
+
+
+
  
