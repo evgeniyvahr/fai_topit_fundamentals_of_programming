@@ -125,6 +125,10 @@ style obj2 fill:yellow
     b["b"] --> c["c"]
     c["c"] --> a["a"]
     d["d"]
+    style a:red
+    style b:red
+    style c:red
+    style d:green
 ```
 
 ## Вопросы для анализа
