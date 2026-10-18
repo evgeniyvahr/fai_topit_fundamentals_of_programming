@@ -121,9 +121,9 @@ style obj2 fill:yellow
 ## Схема графа
 ```mermaid
   graph LR
-    a["a"["neighbors"]] --> b["b"]
-    b["b"["neighbors"]] --> c["c"]
-    c["c"["neighbors"]] --> a["a"]
+    a["a["neighbors"]"] --> b["b"]
+    b["b["neighbors"]"] --> c["c"]
+    c["c["neighbors"]"] --> a["a"]
 ```
 
 ## Вопросы для анализа
