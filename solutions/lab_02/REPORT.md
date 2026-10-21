@@ -166,5 +166,8 @@ style obj2 fill:yellow
 3) Использовать кортежи вместо массивов для работы с неизменными данными и создавать список нужного размера, а не использовать append лишний раз (задание 5 части 1 и 2)
 
 ## Практическая задача
+<img width="741" height="375" alt="image" src="https://github.com/user-attachments/assets/e01f81bc-c746-4310-9972-263f92eb6e71" />
+<img width="1076" height="737" alt="image" src="https://github.com/user-attachments/assets/7b5c30d5-2b46-48cb-8ad8-dbde286d3532" />
+
 
 
