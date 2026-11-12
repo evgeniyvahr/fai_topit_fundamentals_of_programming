@@ -36,6 +36,10 @@
 
 
 # Задание 2
+<img width="672" height="543" alt="image" src="https://github.com/user-attachments/assets/e6618112-8198-4c4a-937f-61af83894f28" />
+
+### Дополнительный алгоритмический эксперимент
+<img width="266" height="310" alt="image" src="https://github.com/user-attachments/assets/0bf5cfbe-2afd-4534-9a0b-89d033ea468a" />
 
 | Операция | Временная сложность |
 |---|---------------------|
@@ -44,9 +48,9 @@
 | Поиск максимального значения | O(n)                |
 | Подсчёт чётных значений | O(n)                |
 | Подсчёт значений > среднего (2-й проход) | O(n)                |
-| Бинарный поиск | O(log n)            |
+| Проверка числа на простоту | O(sqrt(n)) | 
 
-Число операций всегда зависит от длины массива. 
+Число операций всегда зависит от длины массива (n). 
 
 Необходимая доп память: для переменных, в которых сохраняется результат.
 
@@ -171,44 +175,15 @@ assert build_report("boris", []) == "Результат: отсутствуют 
 assert collect_tags("java", "", "  ", "java", "c++") == ("java", "c++"), "Ошибка"
 assert collect_tags("  hello  ", "HELLO") == ("hello",), "Ошибка"
 assert collect_tags() == (), "Ошибка"
-
-
-# Вызовы функций с позиционными и именованными аргументами
-print(f"arithmetic_mean([10.0, 20.0, 30.0]) = {arithmetic_mean([10.0, 20.0, 30.0])}") # позиционные аргументы
-print(f"normalize_name('  anna   ivanova  ') = '{normalize_name('  anna   ivanova  ')}'") # позиционный аргумент
-print(f"build_report('dmitriy, [6, 7, 8], prefix='Оценка') = {build_report("dmitriy", 
-                                        [6, 7, 8], prefix="Оценка")}") # позиционные и именованный аргументы
-print(f"collect_tags('A', 'B', lowercase=False) = {collect_tags('A', 'B', lowercase=False)}")
-
-print('\n')
-
-# распаковка списка и словаря
-tags_list = ["python", "java", "python", "c++"]
-print(f"tags_list = {tags_list}")
-print(f"collect_tags(*tags_list) = {collect_tags(*tags_list)}")
-
-parameters = {"precision": 1, "prefix": "Итог"}
-print(f"parameters = {parameters}")
-print(f"build_report('boris', [4, 5], **parameters) = '{build_report('boris', [4, 5], **parameters)}'")
 ```
+<img width="941" height="73" alt="image" src="https://github.com/user-attachments/assets/95a1a8c9-af82-4f08-a5d1-aa96c6b5cb26" />
+<img width="941" height="109" alt="image" src="https://github.com/user-attachments/assets/d122ad8b-63fe-4eb3-8fab-f7765fac8fe4" />
+
+
 
 ### Исследования LEGB
-```python
-# исследование LEGB
-course = "Fundamentals of programming"
-def func(name):
-    grade = "unknown"
-    def in_func(new_grade):
-        nonlocal grade
-        grade = new_grade
-        print(f"[in_func] Курс: {course}")
-        print(f"[in_func] Студент: {name}")
-        print(f"[in_func] Оценка: {grade}")
-    print(f"[func] grade={grade}")
-    in_func("good")
-    print(f"[in_func] grade={grade}")
-    return grade
-```
+<img width="466" height="163" alt="image" src="https://github.com/user-attachments/assets/926a95d8-2f72-4158-9980-d3870ea55fcc" />
+
 #### Схема областей видимости
 - **B** Built-in: `len`, `print`, `range`, `int`, ...
   - **G** Global: `course = "Fundamentals of Programming"`
@@ -221,24 +196,20 @@ def func(name):
 def add_result(value, results=[]):
     results.append(value)
     return results
-
-
 print(add_result(1))
 print(add_result(2))
 print(add_result(3))
-
-
 def new_add_result(value, results=None):
     if results is None:
         results = []
     results.append(value)
     return results
-
-
 print(new_add_result(1))
 print(new_add_result(2))
 print(new_add_result(3))
 ```
+<img width="230" height="185" alt="image" src="https://github.com/user-attachments/assets/0af4e7e2-b137-4f28-a5db-d4a837fd96bd" />
+
 Значение по умолчанию results=[] вычисляется только 1 раз в момент определения функции, поэтому при каждом последующем вызове используется один и тот же объект списка
 
 ### Практическое расширение
@@ -272,228 +243,25 @@ print(f"make_threshold_checker(4): \n check_4(3) = {check_4(3)}")
 print(f"\napply_to_results(check_3, results): {apply_to_results(check_3, results)}")
 print(f"apply_to_results(check_4, results): {apply_to_results(check_4, results)}")
 ```
+<img width="935" height="380" alt="image" src="https://github.com/user-attachments/assets/d64ce3b1-a46f-419b-8050-aea443373da0" />
+
 
 В замыкании сохраняется ссылка на `thresholsd` из функции `make_threshold_checker`. Значение `threshold` замораживается в момент создания `checker`
 
 # Задание 5
-```python
-def mean(values):
-    """
-    Контракт:
-        Входные данные: values - список чисел.
-        Выходные данные: среднее арифметическое.
-        Особые случаи: пустой список -> None.
-    """
-    if not values:
-        return None
-    return sum(values) / len(values)
+<img width="989" height="746" alt="image" src="https://github.com/user-attachments/assets/0a7c1411-04b4-498a-b6d9-69ea2a6c392f" />
+<img width="676" height="554" alt="image" src="https://github.com/user-attachments/assets/0838cbe6-9acc-4af8-96b4-bd81cc179a55" />
+<img width="611" height="691" alt="image" src="https://github.com/user-attachments/assets/648a628f-ce14-4b27-b078-ec5be8a32bff" />
+<img width="545" height="506" alt="image" src="https://github.com/user-attachments/assets/40d32f88-8038-46e1-bfc0-9dc125ce316e" />
+<img width="535" height="560" alt="image" src="https://github.com/user-attachments/assets/7e262129-31c0-432b-b71b-ac0f1a0ff36c" />
+<img width="502" height="254" alt="image" src="https://github.com/user-attachments/assets/364235a8-d1ba-4f05-a42a-84f0d1366cf4" />
+<img width="1069" height="747" alt="image" src="https://github.com/user-attachments/assets/f403ddf7-dc52-4b29-9d02-a2af66fa8f16" />
+<img width="551" height="720" alt="image" src="https://github.com/user-attachments/assets/6d604ada-c861-494d-8ca8-c52c4ca81160" />
 
 
-def minimum(values):
-    """
-    Контракт:
-        Входные данные: values - список чисел.
-        Выходные данные: минимальное значение.
-        Особые случаи: пустой список -> None.
-    """
-    mn = 100000
-    if not values:
-        return None
-    for i in values:
-        if i < mn:
-            mn = i
-    return mn
+<img width="432" height="266" alt="image" src="https://github.com/user-attachments/assets/ddf717cd-cbe4-4097-8802-9abaded86c71" />
 
 
-def maximum(values):
-    """
-    Контракт:
-        Входные данные: values - список чисел.
-        Выходные данные: максимально значение.
-        Особые случаи: пустой список -> None.
-    """
-    mx = 0
-    if not values:
-        return None
-    for i in values:
-        if i > mx:
-            mx = i
-    return mx
-
-
-def classify(score):
-    """
-    Контракт:
-        Входные данные: score - число (0 - 100).
-        Выходные данные: строка (категория результата).
-        Особые случаи: None -> нет данных
-    """
-    if score is None:
-        return "Нет данных"
-    elif score < 60:
-        return "Недостаточный"
-    elif score < 75:
-        return "Удовлетворительный"
-    elif score < 90:
-        return "Хороший"
-    else:
-        return "Отличный"
-
-
-def student_summary(name, results):
-    """
-    Контракт:
-        Входные данные: name - строка (имя студента), results - список чисел.
-        Выходные данные: словарь с ключами:
-            Имя, Результаты, Средний результат, Минимальный результат, Максимальный результат, Категория
-        Особые случаи: пустой список -> средний/минимальный/максимальный результаты = None, Категория = "нет данных"
-    """
-    return {
-        "Имя": name,
-        "Результаты": results,
-        "Средний результат": mean(results),
-        "Минимальный результат": minimum(results),
-        "Максимальный результат": maximum(results),
-        "Категория": classify(mean(results)),
-    }
-
-
-def find_top_students(students):
-    """
-    Контракт:
-        Входные данные: students - словарь {имя: [результаты]}
-        Выходные данные: список имён лидеров
-        Особые случаи: пустой словарь -> []
-    """
-    if not students:
-        return None
-    means = {}
-    for name, results in students.items():
-        if results:
-            means[name] = mean(results)
-    if not means:
-        return None
-    max_mean = maximum(list(means.values()))
-    return [name for name, mean_1 in means.items() if mean_1 == max_mean]
-
-
-def group_summary(students):
-    """
-    Контракт:
-        Входные данные: students - словарь {имя: [результаты]}
-        Выходные данные: словарь с ключами
-            Студенты (student_summary), Средний результат группы, Количество студентов в каждой категории, Лидеры
-        Особые случаи: пустой словарь -> все значения None/0/[]
-    """
-    if not students:
-        return "Нет данных"
-    student_stats = []
-    all_results = []
-    category_counts = {
-        "Нет данных": 0,
-        "Недостаточный": 0,
-        "Удовлетворительный": 0,
-        "Хороший": 0,
-        "Отличный": 0,
-    }
-    for name, results in students.items():
-        summary = student_summary(name, results)
-        student_stats.append(summary)
-        all_results.extend(results)
-        if summary["Категория"] in category_counts:
-            category_counts[summary["Категория"]] += 1
-    group_mean = mean(all_results) if all_results else None
-    top_students = find_top_students(students)
-    return {
-        "Студенты": student_stats,
-        "Средний результат группы": group_mean,
-        "Количество студентов в каждой категории": category_counts,
-        "Лидеры": top_students
-    }
-
-
-def format_report(student_data, group_data):
-    """
-    Контракт:
-        Входные данные: student_data - список словарей student_summary, group_data - словарь group_summary
-        Выходные данные: строка - текстовый отчёт
-        Особые случаи: пустые данные -> "нет данных"
-    """
-    report = []
-    report.append("Отчёт по результатам группы")
-    if not student_data:
-        report.append("Нет данных о студентах")
-        return '\n'.join(report)
-    report.append("\nСтатистика по студентам:")
-    for s in student_data:
-        report.append(f"Студент: {s['Имя']}")
-        report.append(f"Результаты: {s['Результаты']}")
-        if s["Средний результат"] is not None:
-            report.append(f"Средний результат: {s['Средний результат']:.2f}")
-            report.append(f"Минимальный результат: {s['Минимальный результат']}")
-            report.append(f"Максимальный результат: {s['Максимальный результат']}")
-            report.append(f"Категория: {s['Категория']}")
-        else:
-            report.append("Нет данных о результатах студента")
-        report.append('\n')
-    report.append(f"Статистика группы:")
-    if group_data["Средний результат группы"] is not None:
-        report.append(f"Средний результат группы: {group_data['Средний результат группы']:.2f}")
-    else:
-        report.append("Нет данных о результатах группы")
-    report.append("\nКоличество студентов по категориям:")
-    for cat, count in group_data["Количество студентов в каждой категории"].items():
-        report.append(f"{cat}: {count}")
-    report.append("\nЛидеры")
-    if group_data["Лидеры"]:
-        for name in group_data["Лидеры"]:
-            report.append(f"- {name}")
-    else:
-        report.append("Нет данных о лидерах")
-    return '\n'.join(report)
-
-
-students_1 = {
-    "Анна": [78, 91, 84, 88],
-    "Борис": [60, 72, 68],
-    "Дарья": [95, 93, 97, 90],
-    "Илья": [55, 61],
-}
-students_2 = {"Анна": [79, 86, 92]}
-students_3 = {
-    "Анна": [80, 70, 90],
-    "Борис": [80, 80, 80],
-    "Дарья": [71, 75, 81]
-}
-students_4 = {}
-students_5 = {
-    "Анна": [100, 86, 78],
-    "Борис": []
-}
-students_6 = {
-    "Анна": [59],
-    "Борис": [60],
-    "Виктор": [74],
-    "Глеб": [75],
-    "Дарья": [89],
-    "Евгений": [90],
-}
-
-
-def checker(data):
-    student_data = [student_summary(name, results) for name, results in data.items()]
-    group_data = group_summary(data)
-    report = format_report(student_data, group_data)
-    return report
-
-
-print(f"Сценарий: Обычный набор данных\n {checker(students_1)}\n")
-print(f"Сценарий: Один студент\n {checker(students_2)}\n")
-print(f"Сценарий: Несколько лидеров\n {checker(students_3)}\n")
-print(f"Сценарий: Пустая группа\n {checker(students_4)}\n")
-print(f"Сценарий: Студент без результатов\n {checker(students_5)}\n")
-print(f"Сценарий: Граничные значения категорий\n {checker(students_6)}\n")
-```
 
 ### Декомпозиция программы
 | Функции | Назначение |
